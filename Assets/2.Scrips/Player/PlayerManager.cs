@@ -152,16 +152,16 @@ public class PlayerManager : Singleton<PlayerManager>, IHit
             else
             { UIManager.Instance.Notice($"쿨타임입니다.(남은 시간 : {(int)potionCooldownTimer}초)"); }
         }
-        //if (Input.GetKeyDown(KeyCode.K))
-        //{
-        //    S_Stat.Level += 9;
-        //    S_Stat.MaxHP += 10000;
-        //    S_Stat.HP = S_Stat.MaxHP;
-        //    PW.Wizard_Stat.Att += 1000;
-        //    transform.position = new Vector3(-340, 0, 0);
-        //}
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            S_Stat.Level += 9;
+            S_Stat.MaxHP += 10000;
+            S_Stat.HP = S_Stat.MaxHP;
+            PW.Wizard_Stat.Att += 1000;
+            transform.position = new Vector3(-340, 0, 0);
+        }
         if (Input.GetKeyDown(KeyCode.L))
-        { IncreaseExperience(50); }
+        { IncreaseExperience(50); }        
         if (gameObject.transform.position.y <= -10)
         { Hit(9999);}
     }   

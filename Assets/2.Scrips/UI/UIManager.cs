@@ -58,7 +58,11 @@ public class UIManager : Singleton<UIManager>
             optionButton.SetActive(isactive);
             Cursor.visible = isactive;
             Menu.SetActive(false);
-        }             
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {Time.timeScale = 1;}
+        else if (Input.GetKeyDown(KeyCode.N))
+        { Time.timeScale = 0; }
     }
     void ShowStatusUI()
     {

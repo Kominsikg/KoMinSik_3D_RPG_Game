@@ -19,6 +19,7 @@ public class Mushroom : Monster, IHit
             TargetTr = PlayerManager.Instance.transform;
         CreateMushroom();
         monsternum = 1;
+        transform.rotation = Quaternion.Euler(0,90,0);
     }
 
     void Update()
